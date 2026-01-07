@@ -1,0 +1,75 @@
+<link rel="icon" type="image/png" href="/assets/img/favicon.PNG">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script src="/assets/js/script.js" defer></script>
+
+<body>
+    <div id="header"></div>
+    <div class="container" id="content">
+        <div class="black">mac</div>
+        <div class="aaa">
+            <!-- タブメニュー（labelタグで作成） -->
+            <label for="tab01" class="tab-menu" id="tabMenu01">デバイス</label>
+            <label for="tab02" class="tab-menu" id="tabMenu02">バージョン</label>
+            <label for="tab03" class="tab-menu" id="tabMenu03">ソフト</label>
+        </div>
+        <div class="box-shadow"></div>
+
+        <div class="tab-area">
+            <!-- ラジオボタン（ここはCSSで非表示にする） -->
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab01" checked>
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab02">
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab03">
+
+
+            <!-- コンテンツ -->
+            <div class="tab-content-item" id="tabContent01">
+                <p><a href="#" onclick="loadPart('content', '/os/mac/device/macbookair152024.html')">MacBook Air (15インチ,
+                        M3,
+                        2024)</a></p>
+                <p><a href="#" onclick="loadPart('content', '/os/mac/device/macbookair132024.html')">MacBook Air (13インチ,
+                        M3,
+                        2024)</a></p>
+
+            </div>
+            <div class="tab-content-item" id="tabContent02">
+                <p><a href="#" onclick="loadPart('content', '/os/mac/version/macos15.html')">macOS Sequoia
+                    </a></p>
+                <p><a href="#" onclick="loadPart('content', '/os/mac/version/macos14.html')">macOS Sonoma
+                    </a></p>
+            </div>
+            <div class="tab-content-item" id="tabContent03">
+                <p><a href="#" onclick="loadPart('content', '/os/mac/soft/shortcutapp.html')">ショートカットアプリ</a></p>
+                <p><a href="#" onclick="loadPart('content', '/os/mac/soft/clibor.html')">Clibor</a></p>
+            </div>
+        </div>
+
+        <div class="tab-area">
+            <!-- ラジオボタン（ここはCSSで非表示にする） -->
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab01" checked>
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab02">
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab03">
+
+
+            <!-- コンテンツ -->
+            <div class="tab-content-item" id="tabContent01">
+           <p><a href="https://chigusa-web.com/clibor/">Clibor</a></p>
+        <p>クリップボード履歴ソフト「Clibor」</p>
+        <p>Cliborの FIFO/LIFO機能とは、テキストを連続でコピーし、連続で貼り付けることができます。
+
+          コピー→ペースト、コピー→ペースト、コピー→ペースト・・
+          何度もこの動作を繰り返す必要がある場合、とても面倒ですね。
+          この機能を使うと、 コピー→コピー→コピー、 ペースト→ペースト→ペーストのように連続で行うことができます</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div><!--インクルード部分-->
+    <!------------------------------------------
+このページは live serverでプレビューしてください
+--------------------------------------------->
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="unsafe-url">
+<link rel="icon" type="image/png" href="/assets/img/favicon.PNG">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<script src="/assets/js/script.js" defer></script>
+<style>
+  .contentbbs {
+    width: 100%;
+    height: calc(100vh - 200px);
+    min-height: 600px;
+    position: relative;
+  }
+  .contentbbs iframe {
+    border: none;
+  }
+  
+  /* スマホ用の開くボタン */
+  .bbs-mobile-notice {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    max-width: 90%;
+  }
+  
+  .bbs-open-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .bbs-open-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+  }
+  
+  /* 上スクロール目印 */
+  .scroll-indicator {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    animation: bounce-up 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes bounce-up {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-8px);
+      opacity: 0.6;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .bbs-mobile-notice {
+      display: block;
+    }
+    .contentbbs iframe {
+      filter: blur(3px);
+      pointer-events: none;
+    }
+  }
+</style>
+</head>
+<body>
+  <div id="header"></div>
+  <div class="container" id="content">
+    <div class="contentbbs" id="display-text">
+      <iframe src="https://jbbs.shitaraba.net/computer/45007/" 
+              width="100%" 
+              height="100%" 
+              referrerpolicy="unsafe-url"></iframe>
+      
+      <!-- スマホ用の案内 -->
+      <div class="bbs-mobile-notice">
+        <h2 style="margin: 0 0 1rem 0; font-size: 1.3rem;">
+          📱 スマホからのご利用<span class="scroll-indicator">☝️</span>
+        </h2>
+        <p style="margin: 0 0 1rem 0; color: #666;">
+          スマホでの書き込みは、掲示板を直接開いてご利用ください
+        </p>
+        <a href="https://jbbs.shitaraba.net/computer/45007/" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="bbs-open-btn">
+          掲示板を開く 🚀
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+</body>
+</html>

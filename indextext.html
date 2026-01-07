@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpedia</title>
+    <link rel="icon" type="image/png" href="/assets/img/favicon.PNG">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/script.js?v=20241225006" defer></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="container" id="content">
+        <div class="tab-area">
+            <!-- ラジオボタン（ここはCSSで非表示にする） -->
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab01" checked>
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab02">
+
+            <!-- コンテンツ1: Wikiスタイルのサイトマップ -->
+            <div class="contentwikitop" id="tabContent01">
+                <article class="wiki-article wiki-layout">
+                    <!-- 左メニュー -->
+                    <div class="wiki-menu1">
+                        <!-- HOME -->
+                        <!-- <p style="font-weight: bold; margin-top: 0;">HOME</p>
+                        <p style="margin-left: 1rem;"><a href="/index.html">トップページ</a></p> -->
+
+                        <!-- OS -->
+                        <p style="font-weight: bold; margin-top: 0rem; border-bottom: 1px solid;"><a href="#"
+                                onclick="loadPart('content', '/os.html')">OS</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/os/os2.html#tabContent01')">Windows</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/os/os2.html#tabContent02')">macOS</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/os/os2.html#tabContent03')">iOS</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/os/os2.html#tabContent04')">Android</a></p>
+
+                        <!-- ツール -->
+                        <p style="font-weight: bold; margin-top: 0.8rem; border-bottom: 1px solid;"><a href="#"
+                                onclick="loadPart('content', '/tool.html')">ツール</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/tool/tool2.html#tabContent01')">Photoshop</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/tool/tool2.html#tabContent01')">Illustrator</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/tool/tool2.html#tabContent01')">Adobe Premiere</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/tool/tool2.html#tabContent02')">Visual Studio Code</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/tool/tool2.html#tabContent02')">Figma</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/tool/tool2.html#tabContent02')">Excel</a></p>
+
+                        <!-- ウェブ言語 -->
+                        <p style="font-weight: bold; margin-top: 0.8rem; border-bottom: 1px solid;"><a href="#"
+                                onclick="loadPart('content', '/weblanguage.html')">ウェブ言語</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/weblanguage/weblanguage2.html#tabContent01')">HTML</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/weblanguage/weblanguage2.html#tabContent02')">CSS</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/weblanguage/weblanguage2.html#tabContent03')">JavaScript</a>
+                        </p>
+
+                        <!-- オンラインサービス -->
+                        <p style="font-weight: bold; margin-top: 0.8rem; border-bottom: 1px solid;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice.html')">オンラインサービス</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent01')">YouTube</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent02')">Spotify・Apple
+                                Music・YouTube
+                                Music</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent01')">Netflix</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent01')">U-NEXT</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent03')">Kindle</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent04')">Amazon</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent05')">Dropbox</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent05')">MEGA</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent06')">Evernote</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent06')">Notion</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent07')">AI</a>
+                        </p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent08')">寿司打</a>
+                        </p>
+
+                        <!-- NEWS -->
+                        <p style="font-weight: bold; margin-top: 0.8rem; border-bottom: 1px solid;"><a href="#"
+                                onclick="loadPart('content', '/news.html')">NEWS</a></p>
+
+                        <!-- PEDIAN -->
+                        <p style="font-weight: bold; margin-top: 0.8rem; border-bottom: 1px solid;"><a href="#"
+                                onclick="loadPart('content', '/pedian.html')">PEDIAN</a></p>
+
+                        <!-- BBS -->
+                        <p style="font-weight: bold; margin-top: 0.8rem; border-bottom: 1px solid;"><a href="#"
+                                onclick="loadPart('content', '/bbs.html')">BBS</a></p>
+
+                        <!-- ABOUT -->
+                        <p style="font-weight: bold; margin-top: 0.8rem; border-bottom: 1px solid;"><a href="#"
+                                onclick="loadPart('content', '/about.html')">ABOUT</a></p>
+                        <p style="margin-left: 1rem;"><a href="https://brilliant-lolly-785f3e.netlify.app/"
+                                target="_blank">管理人</a></p>
+
+                        <p style="font-weight: bold; margin-top: 0.8rem; border-bottom: 1px solid;"><a href="#"
+                                onclick="loadPart('content', '/lab/lab.html')">Lab</a></p>
+                        <p style="margin-left: 1rem;"><a href="#"
+                                onclick="loadPart('content', '/lab/aidol/aidol.html#tabContent02')">AIdol</a></p>
+                    </div>
+
+
+
+
+                    <!-- 本文 -->
+                    <div class="wiki-main">
+
+                                                <h1 class="wiki-title" id="top">サイトマップ</h1>
+                        <p class="wiki-lead">
+                            このページでは、当サイトの全ページを体系的に整理したサイトマップを提供しています。
+                            各カテゴリーから目的のページへ簡単にアクセスできます。
+                        </p>
+                        <!-- OS -->
+                        <p><a href="#" onclick="loadPart('content', '/os.html')">OS</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/os/os2.html#tabContent01')">Windows</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/os/os2.html#tabContent02')">macOS</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/os/os2.html#tabContent03')">iOS</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/os/os2.html#tabContent04')">Android</a></p>
+
+                        <!-- ツール -->
+                        <p><a href="#" onclick="loadPart('content', '/tool.html')">ツール</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/tool/tool2.html#tabContent01')">Photoshop</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/tool/tool2.html#tabContent01')">Illustrator</a>
+                        </p>
+                        <p><a href="#" onclick="loadPart('content', '/tool/tool2.html#tabContent01')">Adobe Premiere</a>
+                        </p>
+                        <p><a href="#" onclick="loadPart('content', '/tool/tool2.html#tabContent02')">Excel</a></p>
+
+                        <!-- ウェブ言語 -->
+                        <p><a href="#" onclick="loadPart('content', '/weblanguage.html')">ウェブ言語</a></p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/weblanguage/weblanguage2.html#tabContent01')">HTML</a>
+                        </p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/weblanguage/weblanguage2.html#tabContent02')">CSS</a></p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/weblanguage/weblanguage2.html#tabContent03')">JavaScript</a>
+                        </p>
+
+                        <!-- オンラインサービス -->
+                        <p><a href="#" onclick="loadPart('content', '/onlineservice.html')">オンラインサービス</a></p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent01')">動画</a>
+                        </p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent02')">音楽</a></p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent01')">電子書籍</a>
+                        </p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent01')">ECサイト</a>
+                        </p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent03')">クラウド</a>
+                        </p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent04')">その他</a>
+                        </p>
+                        <p><a href="#"
+                                onclick="loadPart('content', '/onlineservice/onlineservice2.html#tabContent05')">AI</a>
+                        </p>
+
+                        <!-- NEWS -->
+                        <p><a href="#" onclick="loadPart('content', '/news.html')">NEWS</a></p>
+
+                        <!-- PEDIAN -->
+                        <p><a href="#" onclick="loadPart('content', '/pedian.html')">PEDIAN</a></p>
+
+                        <!-- BBS -->
+                        <p><a href="#" onclick="loadPart('content', '/bbs.html')">BBS</a></p>
+
+                        <!-- ABOUT -->
+                        <p><a href="#" onclick="loadPart('content', '/about.html')">ABOUT</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/about2.html')">当サイトについて</a></p>
+                        <p><a href="https://brilliant-lolly-785f3e.netlify.app/" target="_blank">管理人</a></p>
+
+                        <p><a href="#" onclick="loadPart('content', '/lab/lab.html')">Lab</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/lab/aidol/aidol.html#tabContent02')">AIdol</a></p>
+
+
+
+                        <h2 id="overview">概要</h2>
+                        <p>
+                            当サイトは、OS・ツール・ウェブ言語・オンラインサービスなど、
+                            デジタル技術に関する情報を幅広く提供しています。
+                            地図から各カテゴリーへアクセスできます。
+                        </p>
+                    </div>
+
+                    <!-- インフォボックス -->
+                    <aside class="wiki-infobox">
+                        <h2>ウェブペディア</h2>
+                        <div class="infobox-image slider-box" data-auto-slide>
+
+                            <button class="slider-btn prev-btn">◀</button>
+
+                            <div class="slider-inner">
+                                <img src="/assets/img/favicon.PNG" class="slide active" alt="lab 1">
+                                <img src="/assets/img/lab/lab01.png" class="slide active" alt="lab 1">
+                                <img src="/assets/img/aidol/node/geminnie01.PNG" class="slide" alt="lab 2">
+                                <img src="/assets/img/aidol/node/code01.JPG" class="slide" alt="lab 3">
+                                <img src="/assets/img/aidol/node/modal01.JPG" class="slide" alt="lab 4">
+                                <img src="/assets/img/aidol/node/lm01.JPG" class="slide" alt="lab 5">
+                                <div class="slider-caption">
+                                    <h1>Webpedia</h1>
+                                    <p>Born to shine. Ready to slay.</p>
+                                </div>
+                            </div>
+
+                            <button class="slider-btn next-btn">▶</button>
+
+                            <!-- ドットインジケーター -->
+                            <div class="slider-dots"></div>
+
+                        </div>
+
+                        <table>
+                            <tr>
+                                <th>総ページ数</th>
+                                <td>30以上</td>
+                            </tr>
+                            <tr>
+                                <th>メインカテゴリー</th>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>更新頻度</th>
+                                <td>随時更新</td>
+                            </tr>
+                            <tr>
+                                <th>最終更新</th>
+                                <td>2025年12月</td>
+                            </tr>
+                        </table>
+
+                        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #a2a9b1;">
+                            <p style="font-size: 0.9rem;">
+                                当サイトは、OS・ツール・ウェブ言語・オンラインサービスなど、デジタル技術に関する情報を幅広く提供しています。
+                            </p>
+                            <p style="font-size: 0.9rem; margin-top: 1rem;">
+                                より詳しい情報は各カテゴリーページをご覧ください。ご不明な点がございましたら、 <a href="#"
+                                    onclick="loadPart('content', '/bbs.html')">
+                                    掲示板</a>でお気軽にお問い合わせください。
+                            </p>
+                        </div>
+                    </aside>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div><!--インクルード部分-->
+    <!------------------------------------------
+このページは live serverでプレビューしてください
+--------------------------------------------->
+
+</body>
+</html>

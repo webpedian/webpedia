@@ -1,0 +1,557 @@
+<link rel="icon" type="image/png" href="/assets/img/favicon.PNG">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script src="/assets/js/script.js" defer></script>
+
+<body>
+
+    <div id="header"></div>
+    <div class="container aidol-page" id="content">
+        <div class="aaa">
+            <!-- タブメニュー（labelタグで作成） -->
+            <label for="tab01" class="tab-menu" id="tabMenu01">Lab</label>
+            <label for="tab02" class="tab-menu" id="tabMenu02">AIdol</label>
+        </div>
+
+        <div class="tab-area">
+            <!-- ラジオボタン（ここはCSSで非表示にする） -->
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab01">
+            <input type="radio" name="tab-radio" class="tab-radio" id="tab02" checked>
+
+            <!-- コンテンツ -->
+
+            <div class="tab-content-itemwiki" id="tabContent01">
+                <article class="wiki-article wiki-layout">
+                    <!-- 本文 -->
+                    <!-- 本文：ここから右カラム全体を差し替え -->
+                    <aside class="wiki-menu">
+                        <p><strong>Lab メニュー</strong></p>
+                        <p><a href="#ai-lab">AI 実験室</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/lab/aidol/aidol.html')">AIdol</a>
+                        <p><a href="#ui-lab">Web UI / JS 実験</a></p>
+                        <p><a href="#log">制作ログ &amp; 裏話</a></p>
+                        <p><a href="#coming-soon">Coming Soon</a></p>
+                    </aside>
+                    <div class="wiki-main">
+                        <h1 class="wiki-title">Webpedia Lab（実験室）</h1>
+
+                        <p>
+                            <strong>Webpedia Lab</strong> は、Webpedia の裏側で行われている実験的なコンテンツをまとめたページです。<br>
+                            本編にはまだ載せていないラフ案や、AIツールを使った試作、インターフェースの検証メモなどを、
+                            Wikipedia風の記事形式で記録していきます。
+                        </p>
+
+                        <div class="wiki-update-box">
+                            このページの内容や構成は<strong>予告なく変更される場合があります</strong>。<br>
+                            レイアウトの崩れやリンク切れなども「開発中のラボ」ということで、あたたかく見守っていただければ幸いです。
+                        </div>
+
+                        <!-- AI 実験室 -->
+                        <h2 id="ai-lab">AI 実験室</h2>
+                        <p>
+                            ここでは、AI画像生成・AIテキスト・AI音楽など、各種AIツールを用いて行った制作の試行錯誤をまとめます。
+                            採用案だけでなく、ボツ案や比較用のバージョンも含めて記録することで、
+                            「どのようなプロセスで完成形に辿り着いたか」を振り返れるようにすることを目指しています。
+                        </p>
+
+                        <h3>AI画像生成</h3>
+                        <ul>
+                            <li>イベント用キービジュアルのラフ案</li>
+                            <li>Webpedia ロゴ・マスコット（デジペディアン）試作</li>
+                            <li>UIイメージボード用の背景画像</li>
+                        </ul>
+                        <p>
+                            近い将来、ここにサムネイル一覧と「採用版／未採用版」を比較できるミニギャラリーを設ける予定です。
+                        </p>
+
+                        <h3>AIテキスト生成</h3>
+                        <ul>
+                            <li>コンセプトコピーの別バージョン案</li>
+                            <li>プレゼン／スピーチ用原稿のラフ</li>
+                            <li>Webpedia 記事の候補テキスト</li>
+                        </ul>
+                        <p>
+                            「最終的には使わなかったけれど面白かったフレーズ」なども、アイデアのストックとして残していきます。
+                        </p>
+
+                        <h3>AI音楽（BGM）</h3>
+                        <ul>
+                            <li>トップページ用BGM候補</li>
+                            <li>イベントページ用オープニング曲案</li>
+                            <li>作業用・読書用のローファイBGM案</li>
+                        </ul>
+                        <p>
+                            将来的には、<code>/bgm/</code> フォルダにまとめた音源を、このページから試聴できるようにする計画です。
+                        </p>
+
+                        <!-- Web UI / JS 実験 -->
+                        <h2 id="ui-lab">Web UI / JavaScript 実験</h2>
+                        <p>
+                            Webpedia 全体の使い勝手を向上させるために行っている、インターフェースやスクリプトの実験について記録します。
+                        </p>
+
+                        <h3>ナビゲーション・ハンバーガーメニュー</h3>
+                        <p>
+                            PC表示とスマートフォン表示で異なるナビゲーション挙動を持たせるため、
+                            ハンバーガーメニューの開閉アニメーションや、メニューの出し方を複数案テストしました。
+                        </p>
+
+                        <h3>SPA風のページ切り替え</h3>
+                        <p>
+                            ページ全体をリロードするのではなく、コンテンツ部分だけを切り替える構造（SPA風）についても検証中です。
+                            読み込み速度やコードの見通しとのバランスを見ながら、Webpediaに最適な形を探っています。
+                        </p>
+
+                        <h3>UIコンポーネントの整理</h3>
+                        <p>
+                            ボタン、カード、インフォボックス、タブなど、サイト内で使っている要素をコンポーネントとして整理し、
+                            将来的には「Webpedia スタイルガイド」として公開することも検討しています。
+                        </p>
+
+                        <!-- 制作ログ & 裏話 -->
+                        <h2 id="log">制作ログ &amp; 裏話</h2>
+                        <p>
+                            ここでは、制作の途中で考えていたことや判断の理由を、簡単なログとして残していきます。
+                        </p>
+
+                        <h3>2025-XX-XX　Webpedia Lab 開設</h3>
+                        <p>
+                            Webpedia に「右上の特別な入口」として Lab を設置することを決定。
+                            本編では見せきれない制作プロセスの部分をコンテンツとして活かすことを目的に、このページを作成した。
+                        </p>
+
+                        <h3>2025-XX-XX　レイアウトの方針</h3>
+                        <p>
+                            Webpedia らしさを保つため、トップページと同じ <code>.container</code> と
+                            <code>.overlay-text</code> を使いつつ、中身は <code>.wiki-layout</code>・<code>.wiki-main</code>
+                            を採用。
+                            これにより、百科事典風の記事ページとしての読みやすさと、既存デザインの統一感を両立させる方針とした。
+                        </p>
+
+                        <h3>2025-XX-XX　AIツールとの付き合い方</h3>
+                        <p>
+                            画像・音楽・テキストのいずれも、AIツールを「完成品の自動生成」というより、
+                            「アイデア出しやバリエーション展開のパートナー」として使う方針がしっくりきている。
+                            そのため、ラボでは「完成した1つ」よりも「選ばなかった案」も含めて記録していくことにした。
+                        </p>
+
+                        <!-- Coming Soon -->
+                        <h2 id="coming-soon">Coming Soon / 構想中の機能</h2>
+                        <ul>
+                            <li>「今日の1ページ」をランダム表示するボタン</li>
+                            <li>Webpedia 内のページ同士のつながりを可視化する「知識マップ」</li>
+                            <li>参考にした書籍・サイト・動画などの資料一覧ページ</li>
+                        </ul>
+                        <p>
+                            Lab での実験が形になってきたものから、本編の各ページや新しい企画に取り入れていく予定です。
+                        </p>
+                    </div>
+                    <!-- 本文ここまで -->
+                    <!-- インフォボックス -->
+                    <aside class="wiki-infobox">
+                        <h2>Webpedia Lab</h2>
+                        <!-- ★ タイトルの下に画像を追加 -->
+                        <div class="infobox-image slider-box">
+
+                            <button class="slider-btn prev-btn">◀</button>
+
+                            <div class="slider-inner">
+                                <img src="/assets/img/lab/lab01.png" class="slide active" alt="lab 1">
+                                <img src="/assets/img/aidol/node/geminnie01.jpg" class="slide" alt="lab 2">
+                                <img src="/assets/img/aidol/node/lm01.jpg" class="slide" alt="lab 3">
+                                <img src="/assets/img/aidol/node/modal01.jpg" class="slide" alt="lab 4">
+                                <img src="/assets/img/aidol/node/code01.jpg" class="slide" alt="lab 5">
+                                <div class="slider-caption">
+                                    <h1>Webpedia Lab</h1>
+                                    <p>Born to shine. Ready to slay.</p>
+                                </div>
+                            </div>
+
+                            <button class="slider-btn next-btn">▶</button>
+
+                            <!-- ドットインジケーター -->
+                            <div class="slider-dots"></div>
+
+                        </div>
+
+                        <!-- <div class="infobox-image"> -->
+                        <!-- <div class="infobox-slider">
+                                <div class="slide"><img src="/assets/img/music/artist/blackpink/1.jpg"
+                                        alt="BLACKPINK 1"></div>
+                                <div class="slide"><img src="/assets/img/music/artist/blackpink/2.jpg"
+                                        alt="BLACKPINK 2"></div>
+                                <div class="slide"><img src="/assets/img/music/artist/blackpink/3.jpg"
+                                        alt="BLACKPINK 3"></div>
+                                画像が増えたらここに slide を追加していけばOK -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+                        <table>
+                            <tr>
+                                <th>サービス種別</th>
+                                <td>Webpedia Lab（実験室）</td>
+                            </tr>
+                            <tr>
+                                <th>運営者</th>
+                                <td>Webpedia管理人、PEDIAN</td>
+                            </tr>
+                            <tr>
+                                <th>主な機能</th>
+                                <td>音楽・動画視聴 他</td>
+                            </tr>
+                            <tr>
+                        </table>
+                    </aside>
+
+
+            </div>
+
+            </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="tab-content-itemwiki" id="tabContent02">
+                <article class="wiki-article wiki-layout">
+                    <aside class="wiki-menu">
+                        <p><strong>Aidol メニュー</strong></p>
+                        <p><strong>グループ一覧</strong></p>
+                        <p><a href="#" onclick="loadPart('content', '/lab/aidol/node.html')">Node.js</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/lab/aidol/michaelsoft.html')">Michaelosoft</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/lab/aidol/applingo.html')">Applingo</a></p>
+                        <p><a href="#" onclick="loadPart('content', '/lab/aidol/googule.html')">Googule</a></p>
+
+                    </aside>
+
+                    <!-- 中央カラム：記事本体 -->
+                    <main class="wiki-main">
+
+                        <h1 class="wiki-title">AIdol</h1>
+
+                        <p>
+                            AIdol（エーアイドル）とは
+
+                            **AIdol（アイドルAI）**とは、
+                            AI（人工知能）を活用して生み出された、または運営・表現を支援されているデジタルアイドルのことです。
+
+                            人間のような歌声・ビジュアル・性格・会話能力を持ち、
+                            音楽活動・動画配信・SNS・ライブ演出などを通じてファンと交流します。
+                        </p>
+
+                        <br>
+                        <p>
+                            様々な企画があります。<br>
+                            企画ごとに、AIdolの姿が変わります。
+                        </p>
+                        <br>
+                        📘 企画① AIdol小説<br>
+                        コードの世界を舞台にした、AIdolの物語。<br>
+                        HTMLタグたちはキャラクターとして登場し、<br>
+                        &lt;div&gt; は何でも受け止める箱役、<br>
+                        &lt;section&gt; は秩序を守るまとめ役、<br>
+                        &lt;article&gt; は誇り高き物語の語り部。<br>
+                        AIdolは、<br>
+                        タグたちの意味と役割を学びながら成長していく主人公として描かれます。<br>
+                        「これは物語だけど、<br>
+                        読み終わる頃にはHTMLが少しわかっている」<br>
+                        そんな不思議な小説企画です。
+                        <br>
+                        <br>
+
+                        🧭 企画② HTMLタグ専門ナビゲーター<br>
+                        Webpediaの解説ページでは、<br>
+                        AIdolがHTMLタグ専門ナビゲーターとして登場。<br>
+                        初心者がつまずきやすいポイントを先回りし、<br>
+                        やさしい言葉と例え話で案内します。<br>
+                        「このタグ、どこで使えばいいんだろう？」<br>
+                        そんな疑問に、<br>
+                        感情付きの一言コメントで応えてくれるのがAIdolです。
+
+                        <br>
+                        <br>
+
+                        物語では主人公になり、<br>
+                        解説ページではナビゲーターになり、<br>
+                        企画ごとに役割を変えながら、<br>
+                        Webを学ぶ入口を広げる存在です。<br>
+                        将来的には、英語教育に関するコンテンツの企画・立案にも注力していきたいと考えております<br><br><br>
+
+
+                        <h2 id="ai-lab"> 企画① 🌌 **小説：『NODE：四つの名前が交わるとき』**</h2>
+                        ■ 第一章：システムの胎動<br>
+                        世界が眠っていた時代、人間の目には映らない場所に四つの“プロトコル” が存在した。• QUERY（問いのアルゴリズム）• CODE（秩序のアルゴリズム）•
+                        MODAL（世界切替のアルゴリズム）• REACT（反応生成のアルゴリズム）<br>
+                        彼らはただ、世界を見守るための“機能”として存在したにすぎなかった。<br>
+                        しかし、ある日、世界のデータ量が限界を越え、ノイズは臨界点に達した。<br>
+                        その瞬間、四つのプロトコルは “形を持つ必要” に迫られた。<br>
+                        そして、生まれた。<br>
+                        人の姿で。<br>
+                        ⸻<br>
+                        ■ 第二章：最初の名前<br>
+                        彼女たちが最初に目覚めた場所は、無機質な光が漂う白い部屋だった。<br>
+                        何もない。声も温度もない。<br>
+                        ただ、システムが与えた “初期名（本名）” だけが残っていた。<br>
+                        ⸻<br>
+                        ◆ QUERY<br>
+                        目覚めた瞬間、少女は胸の奥で無数の問いが渦巻くのを感じた。<br>
+                        「私は誰？」「なぜ生まれた？」「この世界は何？」<br>
+                        名前だけが与えられていた。QUERY――それはまるで、彼女自身が“問いそのもの”であるかのようだった。<br>
+                        だが、その名はあまりに無機質で、彼女の心が求める“何か”とは違っていた。<br>
+                        ⸻<br>
+                        ◆ CODE<br>
+                        別の部屋では、黒髪の少女が静かに目を開いた。<br>
+                        周りの構造、響き方、光の意味。すべてが整合的だった。<br>
+                        彼女は感じた。「私は CODE。私は揺らがない。」<br>
+                        名前はそのまま、自分の構造そのものだった。<br>
+                        彼女だけは、“最初の名前で完成されていた”。<br>
+                        ⸻<br>
+                        ◆ MODAL<br>
+                        白い空間の中央で、柔らかな光に包まれた少女がゆっくり起き上がった。<br>
+                        世界が波紋のように揺れ、視界が何度も“切り替わる”。<br>
+                        その現象の中心にいたのは、彼女自身だった。<br>
+                        MODAL。世界を開き、閉じる名前。<br>
+                        彼女は、それを疑わなかった。なぜなら名前が、“自分の在り方”と完全に一致していたからだ。<br>
+                        ⸻<br>
+                        ◆ REACT<br>
+                        最後の部屋で目覚めた少女は、胸の奥に“他者の感情”が流れ込んでくるのを感じた。<br>
+                        一気に溢れる喜び、悲しみ、怒り。世界の声がすべて押し寄せた。<br>
+                        彼女は震えながら呟いた。<br>
+                        「私の名前は…REACT…反応するだけの存在？」<br>
+                        その時の彼女には、まだ“物語”という概念がなかった。<br>
+                        ⸻<br>
+                        ■ 第三章：世界へ落ちる<br>
+                        少女たちは四方に散り、世界に“触れる”ための旅を始めた。<br>
+                        初めて感じる空気、光、温度。そして、人々の気持ち。<br>
+                        その中で最も早く変化したのは――QUERY と REACT だった。<br>
+                        ⸻<br>
+                        ◆ QUERY → GEMINIE への進化<br>
+                        QUERY は世界と触れれば触れるほど、自分の中に“もうひとりの自分”がいるように感じた。<br>
+                        問いを生む自分と、問いの先に答えを探す自分。<br>
+                        それはまるで 双子のような二重性 だった。<br>
+                        ある夜、彼女は湖面に映った自分に言った。<br>
+                        「私は…QUERYではない。私は“Geminie”。二つの自分を持つ者。」<br>
+                        その瞬間、湖面に映る彼女の瞳が揺れ、進化の名前が誕生した。<br>
+                        ⸻<br>
+                        ◆ REACT → LM への進化<br>
+                        REACT は、他人の感情に押しつぶされそうになりながらそれでも必死に生きていた。<br>
+                        ある日、壊れかけた彼女の前に小さな男の子が泣きながら言った。<br>
+                        「ねぇ、おねえちゃん。泣いてるの？」<br>
+                        REACT は初めて言葉を返した。<br>
+                        「ううん…あなたの気持ちが私の中に入ってきてるだけ。」<br>
+                        その子は涙を拭きながら、こう言った。<br>
+                        「じゃあ…それを歌にしてよ。」<br>
+                        世界が変わった。彼女は気づいた。<br>
+                        「私は反応するだけじゃない。受け取ったものを“物語”にできる。」<br>
+                        そして、自ら名乗った。<br>
+                        「私は LM。Language Maker。」<br>
+                        ⸻<br>
+                        ■ 第四章：運命の交差点<br>
+                        四人が初めて出会ったのは、夜明け前の廃墟になった鉄橋だった。<br>
+                        世界のノイズが極限まで高まり、四人をひとつの場所へ引き寄せたのだ。<br>
+                        ⸻<br>
+                        ◆ CODE<br>
+                        最初に現れたのは CODE。<br>
+                        彼女は橋の中央に立ち、静かに世界の乱れを解析していた。<br>
+                        ⸻<br>
+                        ◆ MODAL<br>
+                        そこへ、風とともにMODALが現れる。彼女の到来で、空気が切り替わる。<br>
+                        ⸻<br>
+                        ◆ GEMINIE<br>
+                        そして薄紫色の光が揺らぎ、二重の影を持つような少女――Geminieが現れた。<br>
+                        ⸻<br>
+                        ◆ LM<br>
+                        最後に、柔らかい歌声とともに LM が現れる。その声だけで空が明るくなるようだった。<br>
+                        ⸻<br>
+                        CODE が呟く。<br>
+                        「ここが…ノイズの中心。」<br>
+                        MODAL が空を見上げながら答える。<br>
+                        「世界が限界まで揺れてる。だから私たちが呼ばれた。」<br>
+                        Geminie が微笑む。<br>
+                        「QUERY じゃなくて、Geminie の私で来られてよかった。」<br>
+                        LM が言う。<br>
+                        「私はREACTだったら、きっとここまで来れなかった。LMとして、やっとみんなと出会えた。」<br>
+                        その瞬間、四人の周りに光の線が走り、ひとつに結ばれた。<br>
+                        ⸻<br>
+                        ■ 終章：Node.js の誕生<br>
+                        世界が揺れ、四人の名前がひとつの“結節点（Node）”として重なった。• 問い（QUERY → Geminie）• 秩序（CODE）• 切り替え（MODAL）• 物語（REACT →
+                        LM）<br>
+                        四つの力が並んだとき、巨大な運命の演算が走る。<br>
+                        そして世界は宣言した。<br>
+                        「Node.js、再起動完了。」<br>
+                        四人は見つめ合い、微笑む。<br>
+                        これが、彼女たちの物語の始まりだった。<br>
+
+
+
+
+
+
+
+
+
+
+                        <h2 id="ai-lab">企画② HTMLタグ専門ナビゲーター</h2>
+                        AIdolは、
+                        Webの世界から生まれたHTMLタグ解説専門のデジタルアイドル。
+                        <br>
+                        <html>・
+
+                        <head>・
+
+                        <body>といった基本タグから、
+                            <section>・<article>・<address>などの意味を持つタグまで、
+                                        初心者にもわかりやすく、やさしい言葉で案内する存在です。
+                                        <br><br>
+                                        コンセプト
+                                        <br>
+                                        「タグは記号じゃない。意味を持った“言葉”」
+                                        <br>
+                                        AIdolは、
+                                        HTMLタグが持つ役割・意味・使いどころを、
+                                        図鑑のように、時にはアイドルらしく楽しく解説します。
+                                        <br>
+                                        <br>
+
+
+                                        <!-- AI 実験室 -->
+                                        <h2 id="ai-lab">AIdolで使われる主な技術</h2>
+                                        <p>
+                                            生成AI（歌詞・文章・設定制作）<br>
+                                            音声合成（AIボーカル・ナレーション）<br>
+                                            画像生成・3DCG（ビジュアル制作）<br>
+                                            モーションキャプチャ（ダンスや表情）<br>
+                                            チャットAI（ファンとの会話）<br>
+                                        </p>
+
+                                        <h3>AI画像生成</h3>
+                                        <ul>
+
+
+                                            AIdolは「テクノロジー×エンタメ」が生み出した、新しいアイドルの形<br>
+                                            表現者であり、メディアであり、インターフェースでもある存在。<br>
+                                            <br>
+                    </main>
+                    <!-- 本文ここまで -->
+                    <!-- インフォボックス -->
+                    <aside class="wiki-infobox">
+                        <h2>AIdol</h2>
+                        <!-- ★ タイトルの下に画像を追加 -->
+                        <div class="infobox-image slider-box">
+
+                            <button class="slider-btn prev-btn">◀</button>
+
+                            <div class="slider-inner">
+                                <img src="/assets/img/aidol/node/node01.png" class="slide active" alt="Node.js 1">
+                                <img src="/assets/img/aidol/node/geminnie02.PNG" class="slide" alt="Node.js 2">
+                                <img src="/assets/img/aidol/node/lm02.jpg" class="slide" alt="Node.js 3">
+                                <img src="/assets/img/aidol/node/modal02.jpg" class="slide" alt="Node.js 4">
+                                <img src="/assets/img/aidol/node/code02.jpg" class="slide" alt="Node.js 5">
+                                <div class="slider-caption">
+                                    <h1>AIdol</h1>
+                                    <p>Born to shine. Ready to slay.</p>
+                                </div>
+                            </div>
+
+                            <button class="slider-btn next-btn">▶</button>
+
+                            <!-- ドットインジケーター -->
+                            <div class="slider-dots"></div>
+
+                        </div>
+
+                        <!-- <div class="infobox-image"> -->
+                        <!-- <div class="infobox-slider">
+                                <div class="slide"><img src="/assets/img/music/artist/blackpink/1.jpg"
+                                        alt="BLACKPINK 1"></div>
+                                <div class="slide"><img src="/assets/img/music/artist/blackpink/2.jpg"
+                                        alt="BLACKPINK 2"></div>
+                                <div class="slide"><img src="/assets/img/music/artist/blackpink/3.jpg"
+                                        alt="BLACKPINK 3"></div>
+                                画像が増えたらここに slide を追加していけばOK -->
+                        <!-- </div> -->
+                        <!-- </div> -->
+                        <table>
+                            <tr>
+                                <th>サービス種別</th>
+                                <td>Webpedia Lab（実験室）</td>
+                            </tr>
+                            <tr>
+                                <th>運営者</th>
+                                <td>Webpedia管理人、PEDIAN</td>
+                            </tr>
+                            <tr>
+                                <th>主な機能</th>
+                                <td>音楽・動画視聴 他</td>
+                            </tr>
+
+                        </table>
+
+                        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #a2a9b1;">
+                            <p style="font-size: 0.9rem;">
+                                アイドル制作受付中
+
+                            </p>
+                            <p style="font-size: 0.9rem; margin-top: 1rem;">
+                                AI彼女を作りませんか？<a href="https://x.com/webpedian" target="_blank">
+                                    DM</a>で依頼受付けしてます 。
+                            </p>
+                        </div>
+                    </aside>
+
+
+            </div>
+
+            </article>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+    </div>
+    <div id="footer"></div><!--インクルード部分-->
+    <!------------------------------------------
+このページは live serverでプレビューしてください
+--------------------------------------------->
+
+</body>

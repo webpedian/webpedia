@@ -1,0 +1,36 @@
+<header>
+  <div class="header_inner">
+    <a href="#" onclick="loadPart('content', '/index.html')" class="logo"><img class="logo-image"
+        src="/assets/img/logo.png" alt="ロゴ画像"></a>
+
+    <!-- ハンバーガーメニュー -->
+    <div id="hamburger_menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <nav>
+    <!-- 🔊 BGM：ここに1個だけ置く。ページ切替では消えない -->
+    <audio id="bgm" src="/assets/bgm/staybutletmego.mp3" loop></audio>
+    <ul>
+      <li><a href="#" onclick="loadPart('content', '/index.html')" class="nav">HOME</a></li>
+      <li><a href="#" onclick="loadPart('content', '/os.html')" class="nav">OS</a></li>
+      <li><a href="#" onclick="loadPart('content', '/tool.html')" class="nav">ツール</a></li>
+      <li><a href="#" onclick="loadPart('content', '/weblanguage.html')" class="nav">ウェブ言語</a></li>
+      <li><a href="#" onclick="loadPart('content', '/onlineservice.html')" class="nav">オンラインサービス</a></li>
+      <li><a href="#" onclick="loadPart('content', '/news.html')" class="nav">NEWS</a></li>
+      <li><a href="#" onclick="loadPart('content', '/pedian.html')" class="nav">PEDIAN</a></li>
+      <li><a href="#" onclick="loadPart('content', '/bbs.html')" class="nav">BBS</a></li>
+      <li><a href="#" onclick="loadPart('content', '/about.html')" class="nav">ABOUT</a></li>
+      <li>
+        <button id="bgm-toggle" class="wiki-bgm-button" type="button" onclick="toggleBGM()">
+          [BGM] </button>
+      </li>
+      <li class="nav-lab"><a href="#" onclick="loadPart('content', '/lab/lab.html')" class="nav">Lab</a></li>
+    </ul>
+
+  </nav>
+
+</header>
